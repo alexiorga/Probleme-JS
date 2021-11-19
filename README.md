@@ -38,3 +38,9 @@ Output-ul trebuie sa arate asa:
     "user_2": [{...}]
 }
 ```
+
+## De studiat
+
+Pentru urmatorul TODO va rog sa vizionati acest video:
+https://www.youtube.com/watch?v=DHvZLI7Db8E
+
