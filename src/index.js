@@ -41,4 +41,60 @@ console.log('reversed articles', reversedArticles)
 const userFourArticles = ArtileData.filter((user) => user.userId === 4)
 console.log(userFourArticles, 'user4articles')
 
-console.log(userFourArticles[2].indexOf())
+const slicedUser4Artices = userFourArticles.slice(2, 5)
+console.log(slicedUser4Artices, 'sliced4articles')
+
+///////////////////////////////////////////////////////////
+//TODO6
+////////////////////////////////////////////
+
+//? 6. Filtreaza articolele user-ului cu id-ul 1.
+//? Elimina din array-ul obtinut articolul ce contine in title string-ul
+//? "est occaecati" si adauga in locul lui (aceeasi pozitie in array)
+//? articolul cu id-ul 85 (obtinut la pct 3) din `ArticleList`.
+
+const userOneArticles = ArtileData.filter((user) => user.userId === 1)
+console.log(userOneArticles, 'user1articles')
+
+const unwanted = (el) => {
+  return el.title.includes('est occaecati')
+}
+const indexOfUnwanted = userOneArticles.findIndex(unwanted)
+
+const removedArticle = userOneArticles.splice(indexOfUnwanted, 1, articleNo85)
+console.log(removedArticle, 'removedArticle')
+
+///////////////////////////////////////////////////////////
+//TODO7
+////////////////////////////////////////////
+//? Afiseaza numarul total de useri si cate post-uri are fiecare.
+
+const allUsers = ArtileData.map((a) => a.userId)
+
+const removeDuplicates = [...new Set(allUsers)]
+
+const noOfUsers = removeDuplicates.length
+console.log(noOfUsers, 'number of users')
+
+const noOfPostsOfUser = (userId) => {
+  const filterByUsers2 = ArtileData.filter((user) =>
+    [userId].includes(user.userId)
+  )
+  const noOfPosts = filterByUsers2.length
+  // console.log('$$$$$$$$$$', filterByUsers2)
+  return `User number ${userId} has ${noOfPosts} posts.`
+}
+const allUsersPosts = removeDuplicates.map((el) =>
+  console.log(noOfPostsOfUser(el))
+)
+
+///////////////////////////////////////////////////////////
+//TODO8
+////////////////////////////////////////////
+
+//?  Adauga toti userii intr-un object in care avem cheie pentru fiecare user,
+//?    iar fiecare user are lista lui de articole.
+
+const arrayToObject1 = (arr, key) =>
+  Object.assign({}, ...arr.map((item) => ({ [item[key]]: [item] })))
+console.log(arrayToObject1(ArtileData, 'userId'))

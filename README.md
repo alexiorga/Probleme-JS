@@ -18,7 +18,7 @@ Output-ul trebuie sa arate asa:
 ```
 
 4. Afiseaza toate articolele in ordine inversa.
-5. Filtreaza articolele user-ului cu id-ul 4. Din rezultatul obtinut, afiseaza primele 3 articole incepand cu indexul 2.
+5. Filtreaza articolele user-ului cu id-ul 4. Din rezultatul obtinut, afiseaza primele trei articole incepand cu indexul 2.
 6. Filtreaza articolele user-ului cu id-ul 1. Elimina din array-ul obtinut articolul ce contine in title string-ul "est occaecati" si adauga in locul lui (aceeasi pozitie in array) articolul cu id-ul 85 (obtinut la pct 3) din `ArticleList`.
 7. Afiseaza numarul total de useri si cate post-uri are fiecare.
 8. Adauga toti userii intr-un object in care avem cheie pentru fiecare user, iar fiecare user are lista lui de articole.
@@ -43,4 +43,3 @@ Output-ul trebuie sa arate asa:
 
 Pentru urmatorul TODO va rog sa vizionati acest video:
 https://www.youtube.com/watch?v=DHvZLI7Db8E
-
