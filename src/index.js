@@ -1,6 +1,7 @@
 import ArticleList from "./ArtileData";
 console.log('ArticleList', ArticleList)
 let newArticleList = Array.from(ArticleList)
+let ex8ArticleList = Array.from(ArticleList)
 let ex1Arr = []
 let ex5Arr = []
 let ex3 = {}
@@ -33,10 +34,15 @@ ex6Arr.forEach( (element) => {
 
 ex6Arr.splice(ex6Arr.indexOf(elementThatHaveTitle), 1, ex3);
 
-let ex8Arr = {}
 
+ex8ArticleList.sort(function(a, b){
+    if(a.userId < b.userId) { return -1; }
+    if(a.userId > b.userId) { return 1; }
+    return 0;
+})
+let ex8Arr = {}
 let temp = []
-ArticleList.forEach( (currentValue) => {
+ex8ArticleList.forEach( (currentValue) => {
     if(ex8Arr.hasOwnProperty([currentValue.userId]) === false){
         temp = []
         temp.push(currentValue)
